@@ -13,12 +13,12 @@ module.exports = {
     'ios.debug': {
       type: 'ios.app',
       binaryPath: '/Users/ullrich/Library/Developer/Xcode/DerivedData/DetoxGestureApp-bsteguskuvopfnapvbxqybdhhyse/Build/Products/Debug-iphonesimulator/DetoxGestureApp.app',
-      build: 'npx expo prebuild --platform ios && npx expo run:ios --device "iPhone 15"'
+      build: 'npx expo run:ios --device "iPhone 15"'
     },
     'android.debug': {
       type: 'android.apk',
       binaryPath: 'android/app/build/outputs/apk/debug/app-debug.apk',
-      build: 'npx expo prebuild --platform android && cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug',
+      build: 'npx expo prebuild --platform android && pushd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && popd && npx expo start',
       reversePorts: [
         8081
       ]

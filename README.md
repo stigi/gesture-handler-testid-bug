@@ -48,7 +48,8 @@ In the view hierarchy it becomes clear that the `id` is both present on `RNGestu
 
 ## Build and run
 
-- `npm i; npm run ios`
+- `npm i`
+- `npm run detox:build:ios`
 - `npm run detox:test:ios -- --loglevel verbose`
 
 **Expected:** Tests pass, no errors
@@ -59,5 +60,5 @@ In the view hierarchy it becomes clear that the `id` is both present on `RNGestu
 
 - All versions >= 2.25.0 are affected (tested up until the current version 2.28.0)
 - Version 0.24.0 works as expected
-- Only tested iOS
+- Android works as expected (use `npm run detox:build:android` and `npm run detox:test:android` to verify)
 - Only tested Fabric / new architecture, as `RNGestureHandlerButtonComponentView` is Fabric specific
